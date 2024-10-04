@@ -19,11 +19,14 @@ export default async function PageDetails({ params: { slug } } : PageDetailsProp
     <ContainerGrid>
       <h1 className="text-2xl my-5 font-inter font-semibold">Breed Details</h1>
       <Suspense fallback={<p className="w-full h-full text-center text-3xl">Loading images...</p>}>
-        <div>
+        <div className="grid grid-cols-4">
           {
             imagesBreed.length > 0 ? (
               imagesBreed.map((image) => (
-                <Image src={image} key={image} alt="Dog breed" width={500} height={300} />
+                <div key={image}>
+                  <Image src={image} alt="Dog breed" width={500} height={300} />
+                  {/* Client-side favorites component */}
+                </div>
               ))
             ) : (
               <p>No images available for this breed.</p> // Handle empty array gracefully

@@ -1,7 +1,6 @@
 // Function Get All Breeds
 const BASE_URL = 'https://dog.ceo/api';
 
-// TS type for API response
 interface BreedsResponse {
   message: string[]; // Array of images
   status: string;

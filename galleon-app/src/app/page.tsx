@@ -1,4 +1,3 @@
-'use-client'
 import * as React from 'react';
 import ContainerGrid from "@/components/container";
 import type { Metadata } from "next";
@@ -45,7 +44,9 @@ export default async function Home() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Check Breed</Button>
+                  <Link href={'/favorites'}>
+                    <Button size="small">Click To Favorite</Button>
+                  </Link>
                 </CardActions>
               </Card>
             </Link>
