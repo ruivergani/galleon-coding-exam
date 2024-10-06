@@ -4,6 +4,11 @@ const nextConfig = {
   images: {
     domains: ['images.dog.ceo'], // Add the domain here
   },
+  logging: {
+    fetches: {
+      fullUrl: true
+    }
+  }
 };
 
 export default nextConfig;

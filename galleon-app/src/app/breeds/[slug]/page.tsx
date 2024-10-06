@@ -2,6 +2,7 @@ import getBreedImages from "@/app/methods/getBreedsImage";
 import ContainerGrid from "@/components/container"
 import { Suspense } from "react"
 import Image from "next/image"
+import ClientFavorites from "@/app/components/favorites";
 
 interface Params {
   slug: string;
@@ -26,6 +27,7 @@ export default async function PageDetails({ params: { slug } } : PageDetailsProp
                 <div key={image}>
                   <Image src={image} alt="Dog breed" width={500} height={300} />
                   {/* Client-side favorites component */}
+                  <ClientFavorites image={image} breed={slug} />
                 </div>
               ))
             ) : (
