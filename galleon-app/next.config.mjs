@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['images.dog.ceo'], // Add the domain here
   },
-  logging: {
+  logging: { // show in the console log
     fetches: {
       fullUrl: true
     }
